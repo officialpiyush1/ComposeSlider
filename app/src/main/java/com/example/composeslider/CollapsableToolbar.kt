@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.Velocity
 @Composable
 
 fun CollapsableToolbar() {
-	val swipingState = rememberSwipeableState(initialValue = SwipingStates.EXPANDED)
+	val swipingState = rememberSwipeableState(initialValue = SwipeableStates.EXPANDED)
 
 	BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
 
@@ -73,8 +73,8 @@ fun CollapsableToolbar() {
 					orientation = Orientation.Vertical,
 					anchors = mapOf(
 						// Maps anchor points (in px) to states
-						0f to SwipingStates.COLLAPSED,
-						heightInPx to SwipingStates.EXPANDED,
+						0f to SwipeableStates.COLLAPSED,
+						heightInPx to SwipeableStates.EXPANDED,
 					)
 				)
 				.nestedScroll(connection)
@@ -88,7 +88,7 @@ fun CollapsableToolbar() {
 //				Text(text = "From: ${swipingState.progress.from}", modifier = Modifier.padding(16.dp))
 //				Text(text = "To: ${swipingState.progress.to}", modifier = Modifier.padding(16.dp))
 //				Text(text = swipingState.progress.fraction.toString(), modifier = Modifier.padding(16.dp))
-				MotionLayoutHeader(progress =  if (swipingState.progress.to == SwipingStates.COLLAPSED) swipingState.progress.fraction else 1f - swipingState.progress.fraction) {
+				MotionLayoutHeader(progress =  if (swipingState.progress.to == SwipeableStates.COLLAPSED) swipingState.progress.fraction else 1f - swipingState.progress.fraction) {
 					ScrollableContent()
 				}
 			}
@@ -103,7 +103,7 @@ fun CollapsableToolbar() {
 }
 
 // Helper class defining swiping State
-enum class SwipingStates {
+enum class SwipeableStates {
 	EXPANDED,
 	COLLAPSED
 }
