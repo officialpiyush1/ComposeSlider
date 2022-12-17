@@ -258,6 +258,7 @@ fun QudooScrollableTabLayout(
                 .fillMaxWidth()
                 .height(64.dp),
             selectedTabIndex = pagerState.currentPage,
+
             contentColor = Color.White,
             backgroundColor = Color.LightGray,
             indicator = { tabPositions ->

@@ -68,8 +68,8 @@ private fun MainUI() {
             scaleX = 0.7f
             scaleY = 0.7f
             translationY = (-10).dp
-            end.linkTo(parent.end, (-12).dp)
-            top.linkTo(parent.top, (-12).dp)
+            end.linkTo(parent.end, (-24).dp)
+            top.linkTo(parent.top, (-24).dp)
         }
 
         constrain(contentRef) {
@@ -105,8 +105,8 @@ private fun MainUI() {
         }
 
         constrain(newTextBgRef) {
-            end.linkTo(parent.end, (-12).dp)
-            top.linkTo(parent.top, (-12).dp)
+            end.linkTo(parent.end, (-24).dp)
+            top.linkTo(parent.top, (-24).dp)
             alpha = 0.5f
             scaleX = 1.0f
             scaleY = 1.0f
@@ -135,7 +135,7 @@ private fun MainUI() {
         Box(
             modifier = Modifier
                 .layoutId("newTextBgRef")
-                .size(140.dp)
+                .size(160.dp)
                 .background(color = Color.Green.copy(alpha = 0.5f), shape = CircleShape)
         )
         Box(
@@ -166,6 +166,5 @@ private fun MainUI() {
                 }
             }
         }
-
     }
 }

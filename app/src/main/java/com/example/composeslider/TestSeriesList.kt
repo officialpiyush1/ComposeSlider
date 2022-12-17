@@ -83,7 +83,7 @@ private fun MainUI() {
         LazyColumn(
             modifier = Modifier.zIndex(3f),
             state = scrollScroll,
-            contentPadding = PaddingValues(top = 160.dp)
+            contentPadding = PaddingValues(top = 200.dp)
         ) {
             items(100) {
                 Box(
